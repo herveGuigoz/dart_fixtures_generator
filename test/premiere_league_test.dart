@@ -1,4 +1,4 @@
-import 'package:epl_fixtures_builder/main.dart';
+import 'package:openfootball_fixtures_yaml/main.dart';
 import 'package:test/test.dart';
 
 void main() {

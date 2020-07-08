@@ -1,4 +1,4 @@
-## English Premiere League fixtures builder command-line application.
+## Openfootball YAML fixtures builder command-line application.
 
 ### How to
 

@@ -1,4 +1,4 @@
-import 'package:epl_fixtures_builder/main.dart' as app;
+import 'package:openfootball_fixtures_yaml/main.dart' as app;
 import 'package:args/args.dart';
 import 'dart:io';
 
