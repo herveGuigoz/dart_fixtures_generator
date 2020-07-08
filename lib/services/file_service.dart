@@ -1,24 +1,19 @@
 import 'dart:io';
 
 import '../constantes.dart';
-// import 'package:path/path.dart' as p;
 
 abstract class FileService {
-  // String getPath(String fileName) {
-  //   return p.join(p.dirname(Platform.script.toFilePath()), '$fileName.yaml');
-  // }
-
   final sb = StringBuffer();
 
   Future<void> save(String filename) async {
-    final file = File('generated/$filename');
+    final file = File('$kOutputsDirectory$filename');
 
     var sink = file.openWrite();
     sink.write(sb.toString());
     sb.clear();
     await sink.close();
 
-    stdout.writeln('ƪ(ړײ)‎ƪ​​ $filename');
+    stdout.writeln('ツ new file => $kOutputsDirectory$filename');
   }
 
   void write(String string, [int x = 0]) {

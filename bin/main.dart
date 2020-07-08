@@ -6,15 +6,17 @@ ArgResults argResults;
 
 void main(List<String> arguments) async {
   final argParser = ArgParser()
-    // todo -l leagues option
-    ..addOption(
-      'sportCenter',
-      defaultsTo: '@sportCenter1',
-      help: 'The sport center id field.',
+    ..addMultiOption(
+      'leagues',
+      abbr: 'l',
+      allowed: ['EN', 'CH'],
+      defaultsTo: ['EN'],
+      splitCommas: true,
+      help: 'The leagues to build fixtures.',
     )
     ..addFlag(
       'help',
-      // abbr: 'h',
+      abbr: 'h',
       negatable: false,
       help: 'Displays help information.',
     );
@@ -25,11 +27,11 @@ void main(List<String> arguments) async {
     print('${argParser.usage}');
     return;
   }
-  // todo argsParser class in app
-  final sportCenter = argResults['sportCenter'];
 
-  // todo call app.main and do the rest in app package
-  await app.main(sportCenter);
+  final List<String> leagues = argResults['leagues'];
+
+  final leagueToLowercase = leagues.map((e) => e.toLowerCase()).toList();
+  await app.main(leagueToLowercase);
 
   return;
 }

@@ -13,7 +13,8 @@ class _$TeamModelTearOff {
   const _$TeamModelTearOff();
 
   _TeamModel call(
-      {@required ClubModel club,
+      {@required String league,
+      @required ClubModel club,
       @required int victoriesTotal,
       @required int drawsTotal,
       @required int defeatsTotal,
@@ -22,6 +23,7 @@ class _$TeamModelTearOff {
       @required int goalsAgainstTotal,
       @required int difference}) {
     return _TeamModel(
+      league: league,
       club: club,
       victoriesTotal: victoriesTotal,
       drawsTotal: drawsTotal,
@@ -38,6 +40,7 @@ class _$TeamModelTearOff {
 const $TeamModel = _$TeamModelTearOff();
 
 mixin _$TeamModel {
+  String get league;
   ClubModel get club;
   int get victoriesTotal;
   int get drawsTotal;
@@ -54,7 +57,8 @@ abstract class $TeamModelCopyWith<$Res> {
   factory $TeamModelCopyWith(TeamModel value, $Res Function(TeamModel) then) =
       _$TeamModelCopyWithImpl<$Res>;
   $Res call(
-      {ClubModel club,
+      {String league,
+      ClubModel club,
       int victoriesTotal,
       int drawsTotal,
       int defeatsTotal,
@@ -73,6 +77,7 @@ class _$TeamModelCopyWithImpl<$Res> implements $TeamModelCopyWith<$Res> {
 
   @override
   $Res call({
+    Object league = freezed,
     Object club = freezed,
     Object victoriesTotal = freezed,
     Object drawsTotal = freezed,
@@ -83,6 +88,7 @@ class _$TeamModelCopyWithImpl<$Res> implements $TeamModelCopyWith<$Res> {
     Object difference = freezed,
   }) {
     return _then(_value.copyWith(
+      league: league == freezed ? _value.league : league as String,
       club: club == freezed ? _value.club : club as ClubModel,
       victoriesTotal: victoriesTotal == freezed
           ? _value.victoriesTotal
@@ -109,7 +115,8 @@ abstract class _$TeamModelCopyWith<$Res> implements $TeamModelCopyWith<$Res> {
       __$TeamModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {ClubModel club,
+      {String league,
+      ClubModel club,
       int victoriesTotal,
       int drawsTotal,
       int defeatsTotal,
@@ -129,6 +136,7 @@ class __$TeamModelCopyWithImpl<$Res> extends _$TeamModelCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object league = freezed,
     Object club = freezed,
     Object victoriesTotal = freezed,
     Object drawsTotal = freezed,
@@ -139,6 +147,7 @@ class __$TeamModelCopyWithImpl<$Res> extends _$TeamModelCopyWithImpl<$Res>
     Object difference = freezed,
   }) {
     return _then(_TeamModel(
+      league: league == freezed ? _value.league : league as String,
       club: club == freezed ? _value.club : club as ClubModel,
       victoriesTotal: victoriesTotal == freezed
           ? _value.victoriesTotal
@@ -161,7 +170,8 @@ class __$TeamModelCopyWithImpl<$Res> extends _$TeamModelCopyWithImpl<$Res>
 
 class _$_TeamModel extends _TeamModel {
   _$_TeamModel(
-      {@required this.club,
+      {@required this.league,
+      @required this.club,
       @required this.victoriesTotal,
       @required this.drawsTotal,
       @required this.defeatsTotal,
@@ -169,7 +179,8 @@ class _$_TeamModel extends _TeamModel {
       @required this.goalsForTotal,
       @required this.goalsAgainstTotal,
       @required this.difference})
-      : assert(club != null),
+      : assert(league != null),
+        assert(club != null),
         assert(victoriesTotal != null),
         assert(drawsTotal != null),
         assert(defeatsTotal != null),
@@ -179,6 +190,8 @@ class _$_TeamModel extends _TeamModel {
         assert(difference != null),
         super._();
 
+  @override
+  final String league;
   @override
   final ClubModel club;
   @override
@@ -198,13 +211,15 @@ class _$_TeamModel extends _TeamModel {
 
   @override
   String toString() {
-    return 'TeamModel(club: $club, victoriesTotal: $victoriesTotal, drawsTotal: $drawsTotal, defeatsTotal: $defeatsTotal, pointsTotal: $pointsTotal, goalsForTotal: $goalsForTotal, goalsAgainstTotal: $goalsAgainstTotal, difference: $difference)';
+    return 'TeamModel(league: $league, club: $club, victoriesTotal: $victoriesTotal, drawsTotal: $drawsTotal, defeatsTotal: $defeatsTotal, pointsTotal: $pointsTotal, goalsForTotal: $goalsForTotal, goalsAgainstTotal: $goalsAgainstTotal, difference: $difference)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _TeamModel &&
+            (identical(other.league, league) ||
+                const DeepCollectionEquality().equals(other.league, league)) &&
             (identical(other.club, club) ||
                 const DeepCollectionEquality().equals(other.club, club)) &&
             (identical(other.victoriesTotal, victoriesTotal) ||
@@ -233,6 +248,7 @@ class _$_TeamModel extends _TeamModel {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(league) ^
       const DeepCollectionEquality().hash(club) ^
       const DeepCollectionEquality().hash(victoriesTotal) ^
       const DeepCollectionEquality().hash(drawsTotal) ^
@@ -250,7 +266,8 @@ class _$_TeamModel extends _TeamModel {
 abstract class _TeamModel extends TeamModel {
   _TeamModel._() : super._();
   factory _TeamModel(
-      {@required ClubModel club,
+      {@required String league,
+      @required ClubModel club,
       @required int victoriesTotal,
       @required int drawsTotal,
       @required int defeatsTotal,
@@ -259,6 +276,8 @@ abstract class _TeamModel extends TeamModel {
       @required int goalsAgainstTotal,
       @required int difference}) = _$_TeamModel;
 
+  @override
+  String get league;
   @override
   ClubModel get club;
   @override

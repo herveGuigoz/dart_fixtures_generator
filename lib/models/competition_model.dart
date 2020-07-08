@@ -5,10 +5,12 @@ import 'team_model.dart';
 import 'round_model.dart';
 
 class Competition {
+  final String league;
   final String name;
   final List<Round> rounds;
 
   Competition({
+    @required this.league,
     @required this.name,
     @required this.rounds,
   });
@@ -36,12 +38,13 @@ class Competition {
     final teams = clubs.map((c) => TeamModel.fromCompetition(c, this)).toList();
 
     teams.sort((curr, next) => next.pointsTotal.compareTo(curr.pointsTotal));
-    
+
     return teams;
   }
 
-  factory Competition.fromJson(Map<String, dynamic> json) {
+  factory Competition.fromJson(Map<String, dynamic> json, String league) {
     return Competition(
+      league: league,
       name: json['name'],
       rounds: List<Round>.from(json['rounds'].map((x) => Round.fromJson(x))),
     );

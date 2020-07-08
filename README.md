@@ -10,7 +10,7 @@
 dart bin/main.dart
 ```
 
-Files will be generated under `generated` folder.
+Files will be generated under `build/` folder.
 
 - Displays optionnal arguments
 

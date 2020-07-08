@@ -5,38 +5,40 @@ import '../network/network_interface.dart';
 import '../models/competition_model.dart';
 import '../models/team_model.dart';
 import '../models/round_model.dart';
-
-const String kCompetitionURL = '/en.1.json';
-// const String kTeamsURL = '/en.1.clubs.json';
+import '../main.dart';
 
 class FixtureRepository {
   final NetworkInterface _client;
-  Competition _cache;
 
   FixtureRepository(this._client);
 
-  Future<List<TeamModel>> getTeamsCollection() async {
-    final competition = await getCompetition();
+  String _getCompetitionIRI(String league) => '/$league.1.json';
+
+  Future<List<TeamModel>> getTeamsCollection(String league) async {
+    final competition = await getCompetition(league);
 
     return competition.teams;
   }
 
-  Future<Competition> getCompetition() async {
-    if (_cache != null) {
-      return _cache;
+  Future<Competition> getCompetition(String league) async {
+    final fromCache = cacheService.getCompetition(league);
+    if (fromCache != null) {
+      return fromCache;
     }
 
-    final response = await _client.get(kCompetitionURL);
+    final response = await _client.get(_getCompetitionIRI(league));
 
     final asMap = json.decode(response) as Map<String, dynamic>;
 
-    _cache = Competition.fromJson(asMap);
+    final competition = Competition.fromJson(asMap, league);
 
-    return _cache;
+    cacheService.saveCompetition(competition);
+
+    return competition;
   }
 
-  Future<List<Round>> getRounds() async {
-    final competition = await getCompetition();
+  Future<List<Round>> getRounds(String league) async {
+    final competition = await getCompetition(league);
 
     return competition.rounds;
   }

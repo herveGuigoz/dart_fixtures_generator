@@ -10,6 +10,7 @@ part 'team_model.freezed.dart';
 abstract class TeamModel with _$TeamModel {
   TeamModel._();
   factory TeamModel({
+    @required String league,
     @required ClubModel club,
     @required int victoriesTotal,
     @required int drawsTotal,
@@ -50,6 +51,7 @@ abstract class TeamModel with _$TeamModel {
     });
 
     return TeamModel(
+      league: competition.league,
       club: club,
       victoriesTotal: win,
       drawsTotal: draw,

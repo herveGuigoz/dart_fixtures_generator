@@ -1,3 +1,5 @@
+import 'package:openfootball_fixtures_yaml/services/cache_service.dart';
+
 import 'network/network.dart';
 import 'network/network_interface.dart';
 import 'repositories/fixture_repository.dart';
@@ -11,8 +13,10 @@ final TeamService _teamService = TeamService(_repository);
 final CompetitionService _competitionService = CompetitionService(_repository);
 final MatchService _matchService = MatchService(_repository);
 
-Future<void> main(String sportCenter) async {
-  await _teamService.writeTeamFixtures(sportCenter);
-  await _competitionService.writeCompetitionFixtures(sportCenter);
-  await _matchService.writeCompetitionMatchFixtures();
+final cacheService = CacheService();
+
+Future<void> main(List<String> leagues) async {
+  await _teamService.writeTeamFixtures(leagues);
+  await _competitionService.writeCompetitionFixtures(leagues);
+  await _matchService.writeCompetitionMatchFixtures(leagues);
 }
