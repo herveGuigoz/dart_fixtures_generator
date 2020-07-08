@@ -29,7 +29,7 @@ void main(List<String> arguments) async {
   final sportCenter = argResults['sportCenter'];
 
   // todo call app.main and do the rest in app package
-  await app.getTeams(sportCenter);
+  await app.main(sportCenter);
 
   return;
 }

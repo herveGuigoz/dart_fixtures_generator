@@ -1,4 +1,5 @@
 import 'package:meta/meta.dart';
+
 import 'club_model.dart';
 
 class Match {
@@ -15,6 +16,8 @@ class Match {
   final ClubModel team2;
   final int score1;
   final int score2;
+
+  String get dateAsString => '${date.toString().substring(0, 10)} 14:00:00';
 
   factory Match.fromJson(Map<String, dynamic> json) {
     return Match(

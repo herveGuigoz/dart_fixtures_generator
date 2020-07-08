@@ -1,32 +1,60 @@
 include:
     - ./SportCenterFixtures.yaml
 
-AppEntityTeam:
-    team1:
+App\Entity\Team:
+    team10:
         name: Liverpool FC
         primaryColor: '#c4001d'
         secondaryColor: '#c4001d'
         sportCenter: '@sportCenter1'
         createdBy: '@player*'
 
-    team2:
-        name: Norwich City FC
-        primaryColor: '#ffff56'
-        secondaryColor: '#00b248'
-        sportCenter: '@sportCenter1'
-        createdBy: '@player*'
-
-    team3:
-        name: West Ham United FC
-        primaryColor: '#560027'
-        secondaryColor: '#00b8d4'
-        sportCenter: '@sportCenter1'
-        createdBy: '@player*'
-
-    team4:
+    team11:
         name: Manchester City FC
         primaryColor: '#bbdefb'
         secondaryColor: '#bbdefb'
+        sportCenter: '@sportCenter1'
+        createdBy: '@player*'
+
+    team9:
+        name: Leicester City FC
+        primaryColor: '#303f9f'
+        secondaryColor: '#303f9f'
+        sportCenter: '@sportCenter1'
+        createdBy: '@player*'
+
+    team6:
+        name: Chelsea FC
+        primaryColor: '#0d47a1'
+        secondaryColor: '#0d47a1'
+        sportCenter: '@sportCenter1'
+        createdBy: '@player*'
+
+    team12:
+        name: Manchester United FC
+        primaryColor: '#c4001d'
+        secondaryColor: '#c4001d'
+        sportCenter: '@sportCenter1'
+        createdBy: '@player*'
+
+    team20:
+        name: Wolverhampton Wanderers FC
+        primaryColor: '#ffab00'
+        secondaryColor: '#ffab00'
+        sportCenter: '@sportCenter1'
+        createdBy: '@player*'
+
+    team1:
+        name: Arsenal FC
+        primaryColor: '#f44336'
+        secondaryColor: '#f5f5f5'
+        sportCenter: '@sportCenter1'
+        createdBy: '@player*'
+
+    team15:
+        name: Sheffield United FC
+        primaryColor: '#c30000'
+        secondaryColor: '#ffffff'
         sportCenter: '@sportCenter1'
         createdBy: '@player*'
 
@@ -37,9 +65,30 @@ AppEntityTeam:
         sportCenter: '@sportCenter1'
         createdBy: '@player*'
 
-    team6:
+    team17:
+        name: Tottenham Hotspur FC
+        primaryColor: '#ffffff'
+        secondaryColor: '#ffffff'
+        sportCenter: '@sportCenter1'
+        createdBy: '@player*'
+
+    team8:
+        name: Everton FC
+        primaryColor: '#303f9f'
+        secondaryColor: '#303f9f'
+        sportCenter: '@sportCenter1'
+        createdBy: '@player*'
+
+    team16:
         name: Southampton FC
         primaryColor: '#c30000'
+        secondaryColor: '#ffffff'
+        sportCenter: '@sportCenter1'
+        createdBy: '@player*'
+
+    team13:
+        name: Newcastle United FC
+        primaryColor: '#000000'
         secondaryColor: '#ffffff'
         sportCenter: '@sportCenter1'
         createdBy: '@player*'
@@ -51,94 +100,45 @@ AppEntityTeam:
         sportCenter: '@sportCenter1'
         createdBy: '@player*'
 
-    team8:
-        name: Everton FC
-        primaryColor: '#303f9f'
-        secondaryColor: '#303f9f'
-        sportCenter: '@sportCenter1'
-        createdBy: '@player*'
-
-    team9:
-        name: Watford FC
-        primaryColor: '#ffff00'
-        secondaryColor: '#212121'
-        sportCenter: '@sportCenter1'
-        createdBy: '@player*'
-
-    team10:
+    team3:
         name: Brighton & Hove Albion FC
         primaryColor: '#bbdefb'
         secondaryColor: '#fafafa'
         sportCenter: '@sportCenter1'
         createdBy: '@player*'
 
-    team11:
+    team19:
+        name: West Ham United FC
+        primaryColor: '#560027'
+        secondaryColor: '#00b8d4'
+        sportCenter: '@sportCenter1'
+        createdBy: '@player*'
+
+    team18:
+        name: Watford FC
+        primaryColor: '#ffff00'
+        secondaryColor: '#212121'
+        sportCenter: '@sportCenter1'
+        createdBy: '@player*'
+
+    team4:
         name: AFC Bournemouth
         primaryColor: '#b71c1c'
         secondaryColor: '#263238'
         sportCenter: '@sportCenter1'
         createdBy: '@player*'
 
-    team12:
-        name: Sheffield United FC
-        primaryColor: '#c30000'
-        secondaryColor: '#ffffff'
-        sportCenter: '@sportCenter1'
-        createdBy: '@player*'
-
-    team13:
-        name: Tottenham Hotspur FC
-        primaryColor: '#ffffff'
-        secondaryColor: '#ffffff'
-        sportCenter: '@sportCenter1'
-        createdBy: '@player*'
-
-    team14:
+    team2:
         name: Aston Villa FC
         primaryColor: '#8e0038'
         secondaryColor: '#bbdefb'
         sportCenter: '@sportCenter1'
         createdBy: '@player*'
 
-    team15:
-        name: Leicester City FC
-        primaryColor: '#303f9f'
-        secondaryColor: '#303f9f'
-        sportCenter: '@sportCenter1'
-        createdBy: '@player*'
-
-    team16:
-        name: Wolverhampton Wanderers FC
-        primaryColor: '#ffab00'
-        secondaryColor: '#ffab00'
-        sportCenter: '@sportCenter1'
-        createdBy: '@player*'
-
-    team17:
-        name: Newcastle United FC
-        primaryColor: '#000000'
-        secondaryColor: '#ffffff'
-        sportCenter: '@sportCenter1'
-        createdBy: '@player*'
-
-    team18:
-        name: Arsenal FC
-        primaryColor: '#f44336'
-        secondaryColor: '#f5f5f5'
-        sportCenter: '@sportCenter1'
-        createdBy: '@player*'
-
-    team19:
-        name: Manchester United FC
-        primaryColor: '#c4001d'
-        secondaryColor: '#c4001d'
-        sportCenter: '@sportCenter1'
-        createdBy: '@player*'
-
-    team20:
-        name: Chelsea FC
-        primaryColor: '#0d47a1'
-        secondaryColor: '#0d47a1'
+    team14:
+        name: Norwich City FC
+        primaryColor: '#ffff56'
+        secondaryColor: '#00b248'
         sportCenter: '@sportCenter1'
         createdBy: '@player*'
 

@@ -2,104 +2,264 @@ include:
     - ./TeamFixtures.yaml
     - ./CompetitionFixtures.yaml
 
-AppEntityCompetitionTeam:
-    competition1Team1:
-        groupReference: A
-        competition: '@competition1'
-        team: '@team1'
-
-    competition1Team2:
-        groupReference: A
-        competition: '@competition1'
-        team: '@team2'
-
-    competition1Team3:
-        groupReference: A
-        competition: '@competition1'
-        team: '@team3'
-
-    competition1Team4:
-        groupReference: A
-        competition: '@competition1'
-        team: '@team4'
-
-    competition1Team5:
-        groupReference: A
-        competition: '@competition1'
-        team: '@team5'
-
-    competition1Team6:
-        groupReference: A
-        competition: '@competition1'
-        team: '@team6'
-
-    competition1Team7:
-        groupReference: A
-        competition: '@competition1'
-        team: '@team7'
-
-    competition1Team8:
-        groupReference: A
-        competition: '@competition1'
-        team: '@team8'
-
-    competition1Team9:
-        groupReference: A
-        competition: '@competition1'
-        team: '@team9'
-
+App\Entity\CompetitionTeam:
     competition1Team10:
         groupReference: A
+        ranking: 1
+        victoriesTotal: 29
+        drawsTotal: 2
+        defeatsTotal: 2
+        pointsTotal: 89
+        goalsForTotal: 72
+        goalsAgainstTotal: 25
+        difference: 47
         competition: '@competition1'
         team: '@team10'
 
     competition1Team11:
         groupReference: A
+        ranking: 2
+        victoriesTotal: 21
+        drawsTotal: 3
+        defeatsTotal: 9
+        pointsTotal: 66
+        goalsForTotal: 81
+        goalsAgainstTotal: 34
+        difference: 47
         competition: '@competition1'
         team: '@team11'
 
+    competition1Team9:
+        groupReference: A
+        ranking: 3
+        victoriesTotal: 17
+        drawsTotal: 7
+        defeatsTotal: 9
+        pointsTotal: 58
+        goalsForTotal: 63
+        goalsAgainstTotal: 31
+        difference: 32
+        competition: '@competition1'
+        team: '@team9'
+
+    competition1Team6:
+        groupReference: A
+        ranking: 4
+        victoriesTotal: 17
+        drawsTotal: 6
+        defeatsTotal: 10
+        pointsTotal: 57
+        goalsForTotal: 60
+        goalsAgainstTotal: 44
+        difference: 16
+        competition: '@competition1'
+        team: '@team6'
+
     competition1Team12:
         groupReference: A
+        ranking: 5
+        victoriesTotal: 15
+        drawsTotal: 10
+        defeatsTotal: 8
+        pointsTotal: 55
+        goalsForTotal: 56
+        goalsAgainstTotal: 33
+        difference: 23
         competition: '@competition1'
         team: '@team12'
 
-    competition1Team13:
+    competition1Team20:
         groupReference: A
+        ranking: 6
+        victoriesTotal: 13
+        drawsTotal: 13
+        defeatsTotal: 7
+        pointsTotal: 52
+        goalsForTotal: 45
+        goalsAgainstTotal: 36
+        difference: 9
         competition: '@competition1'
-        team: '@team13'
+        team: '@team20'
 
-    competition1Team14:
+    competition1Team1:
         groupReference: A
+        ranking: 7
+        victoriesTotal: 12
+        drawsTotal: 13
+        defeatsTotal: 8
+        pointsTotal: 49
+        goalsForTotal: 49
+        goalsAgainstTotal: 41
+        difference: 8
         competition: '@competition1'
-        team: '@team14'
+        team: '@team1'
 
     competition1Team15:
         groupReference: A
+        ranking: 8
+        victoriesTotal: 12
+        drawsTotal: 12
+        defeatsTotal: 9
+        pointsTotal: 48
+        goalsForTotal: 34
+        goalsAgainstTotal: 33
+        difference: 1
         competition: '@competition1'
         team: '@team15'
 
-    competition1Team16:
+    competition1Team5:
         groupReference: A
+        ranking: 9
+        victoriesTotal: 13
+        drawsTotal: 7
+        defeatsTotal: 13
+        pointsTotal: 46
+        goalsForTotal: 37
+        goalsAgainstTotal: 46
+        difference: -9
         competition: '@competition1'
-        team: '@team16'
+        team: '@team5'
 
     competition1Team17:
         groupReference: A
+        ranking: 10
+        victoriesTotal: 12
+        drawsTotal: 9
+        defeatsTotal: 11
+        pointsTotal: 45
+        goalsForTotal: 51
+        goalsAgainstTotal: 44
+        difference: 7
         competition: '@competition1'
         team: '@team17'
 
-    competition1Team18:
+    competition1Team8:
         groupReference: A
+        ranking: 11
+        victoriesTotal: 12
+        drawsTotal: 8
+        defeatsTotal: 12
+        pointsTotal: 44
+        goalsForTotal: 40
+        goalsAgainstTotal: 47
+        difference: -7
         competition: '@competition1'
-        team: '@team18'
+        team: '@team8'
+
+    competition1Team16:
+        groupReference: A
+        ranking: 12
+        victoriesTotal: 13
+        drawsTotal: 4
+        defeatsTotal: 16
+        pointsTotal: 43
+        goalsForTotal: 42
+        goalsAgainstTotal: 55
+        difference: -13
+        competition: '@competition1'
+        team: '@team16'
+
+    competition1Team13:
+        groupReference: A
+        ranking: 13
+        victoriesTotal: 11
+        drawsTotal: 10
+        defeatsTotal: 12
+        pointsTotal: 43
+        goalsForTotal: 35
+        goalsAgainstTotal: 45
+        difference: -10
+        competition: '@competition1'
+        team: '@team13'
+
+    competition1Team7:
+        groupReference: A
+        ranking: 14
+        victoriesTotal: 11
+        drawsTotal: 9
+        defeatsTotal: 13
+        pointsTotal: 42
+        goalsForTotal: 28
+        goalsAgainstTotal: 40
+        difference: -12
+        competition: '@competition1'
+        team: '@team7'
+
+    competition1Team3:
+        groupReference: A
+        ranking: 15
+        victoriesTotal: 8
+        drawsTotal: 12
+        defeatsTotal: 13
+        pointsTotal: 36
+        goalsForTotal: 35
+        goalsAgainstTotal: 44
+        difference: -9
+        competition: '@competition1'
+        team: '@team3'
 
     competition1Team19:
         groupReference: A
+        ranking: 16
+        victoriesTotal: 8
+        drawsTotal: 7
+        defeatsTotal: 18
+        pointsTotal: 31
+        goalsForTotal: 40
+        goalsAgainstTotal: 58
+        difference: -18
         competition: '@competition1'
         team: '@team19'
 
-    competition1Team20:
+    competition1Team18:
         groupReference: A
+        ranking: 17
+        victoriesTotal: 6
+        drawsTotal: 10
+        defeatsTotal: 17
+        pointsTotal: 28
+        goalsForTotal: 29
+        goalsAgainstTotal: 52
+        difference: -23
         competition: '@competition1'
-        team: '@team20'
+        team: '@team18'
+
+    competition1Team4:
+        groupReference: A
+        ranking: 18
+        victoriesTotal: 7
+        drawsTotal: 6
+        defeatsTotal: 20
+        pointsTotal: 27
+        goalsForTotal: 32
+        goalsAgainstTotal: 59
+        difference: -27
+        competition: '@competition1'
+        team: '@team4'
+
+    competition1Team2:
+        groupReference: A
+        ranking: 19
+        victoriesTotal: 7
+        drawsTotal: 6
+        defeatsTotal: 20
+        pointsTotal: 27
+        goalsForTotal: 36
+        goalsAgainstTotal: 62
+        difference: -26
+        competition: '@competition1'
+        team: '@team2'
+
+    competition1Team14:
+        groupReference: A
+        ranking: 20
+        victoriesTotal: 5
+        drawsTotal: 6
+        defeatsTotal: 22
+        pointsTotal: 21
+        goalsForTotal: 25
+        goalsAgainstTotal: 61
+        difference: -36
+        competition: '@competition1'
+        team: '@team14'
 

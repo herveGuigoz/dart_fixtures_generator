@@ -1,13 +1,23 @@
+import 'package:meta/meta.dart';
+
 class ClubModel {
+  final int id;
   final String key;
   final String name;
   final String code;
   final TeamColors colors;
 
-  ClubModel({this.key, this.name, this.code, this.colors});
+  ClubModel({
+    @required this.id,
+    @required this.key,
+    @required this.name,
+    @required this.code,
+    @required this.colors,
+  });
 
   factory ClubModel.fromJson(Map<String, dynamic> json) {
     return ClubModel(
+      id: idsValues.map[json['code']],
       key: json['key'] as String,
       name: json['name'] as String,
       code: json['code'] as String,
@@ -15,6 +25,29 @@ class ClubModel {
     );
   }
 }
+
+final idsValues = EnumValues({
+    'ARS': 1,
+    'AVL': 2,
+    'BHA': 3,
+    'BOU': 4,
+    'BUR': 5,
+    'CHE': 6,
+    'CRY': 7,
+    'EVE': 8,
+    'LEI': 9,
+    'LIV': 10,
+    'MCI': 11,
+    'MUN': 12,
+    'NEW': 13,
+    'NOR': 14,
+    'SHU': 15,
+    'SOU': 16,
+    'TOT': 17,
+    'WAT': 18,
+    'WHU': 19,
+    'WOL': 20,
+});
 
 final colorsValues = EnumValues({
   'ARS': TeamColors('#f44336', '#f5f5f5'),
@@ -40,12 +73,12 @@ final colorsValues = EnumValues({
 });
 
 class EnumValues<T> {
-  Map<String, TeamColors> map;
-  Map<TeamColors, String> reverseMap;
+  Map<String, T> map;
+  Map<T, String> reverseMap;
 
   EnumValues(this.map);
 
-  Map<TeamColors, String> get reverse {
+  Map<T, String> get reverse {
     reverseMap ??= map.map((k, v) => MapEntry(v, k));
     return reverseMap;
   }
