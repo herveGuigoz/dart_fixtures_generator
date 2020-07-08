@@ -16,6 +16,7 @@ class CompetitionService extends FileService {
     write('App\\Entity\\Competition:');
     write('competition1:', 1);
     write('name: ${competition.name}', 2);
+    write('visible: 1', 2);
     write(
       "expectedStartingAt: <(new DateTime('${competition.expectedStartingAt}'))>",
       2,
