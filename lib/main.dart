@@ -1,32 +1,20 @@
 import 'dart:convert';
 
-import 'package:premiere_league/models/competition_model.dart';
-import 'package:premiere_league/network/network.dart';
-import 'package:premiere_league/network/network_interface.dart';
+import 'models/competition_model.dart';
+import 'network/network.dart';
+import 'network/network_interface.dart';
 
 import 'constantes.dart';
 
 import 'utils/extensions.dart';
 
-import 'services/yaml_service.dart';
 import 'services/tems_service.dart';
 
 final NetworkInterface _network = Network();
 final TeamService _teamService = TeamService(_network);
-final YamlService _yamlService = YamlService(_teamService);
 
-Future<String> getTeams(
-  int startingIndex,
-  String sportCenter,
-  String createdBy,
-  String filename,
-) async {
-  await _yamlService.writeTeamFixtures(
-    startingIndex,
-    sportCenter,
-    createdBy,
-    filename,
-  );
+Future<String> getTeams(String sportCenter) async {
+  await _teamService.writeTeamFixtures(sportCenter);
 }
 
 /*

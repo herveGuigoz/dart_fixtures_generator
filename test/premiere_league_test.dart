@@ -1,4 +1,4 @@
-import 'package:premiere_league/main.dart';
+import 'package:epl_fixtures_builder/main.dart';
 import 'package:test/test.dart';
 
 void main() {

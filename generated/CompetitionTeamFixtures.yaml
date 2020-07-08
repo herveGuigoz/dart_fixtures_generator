@@ -1,0 +1,105 @@
+include:
+    - ./TeamFixtures.yaml
+    - ./CompetitionFixtures.yaml
+
+AppEntityCompetitionTeam:
+    competition1Team1:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team1'
+
+    competition1Team2:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team2'
+
+    competition1Team3:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team3'
+
+    competition1Team4:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team4'
+
+    competition1Team5:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team5'
+
+    competition1Team6:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team6'
+
+    competition1Team7:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team7'
+
+    competition1Team8:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team8'
+
+    competition1Team9:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team9'
+
+    competition1Team10:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team10'
+
+    competition1Team11:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team11'
+
+    competition1Team12:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team12'
+
+    competition1Team13:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team13'
+
+    competition1Team14:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team14'
+
+    competition1Team15:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team15'
+
+    competition1Team16:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team16'
+
+    competition1Team17:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team17'
+
+    competition1Team18:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team18'
+
+    competition1Team19:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team19'
+
+    competition1Team20:
+        groupReference: A
+        competition: '@competition1'
+        team: '@team20'
+

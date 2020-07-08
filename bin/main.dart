@@ -1,4 +1,4 @@
-import 'package:premiere_league/main.dart' as app;
+import 'package:epl_fixtures_builder/main.dart' as app;
 import 'package:args/args.dart';
 import 'dart:io';
 
@@ -6,33 +6,15 @@ ArgResults argResults;
 
 void main(List<String> arguments) async {
   final argParser = ArgParser()
-    ..addOption(
-      'index',
-      abbr: 'i',
-      defaultsTo: '1',
-      help: 'The starting index.',
-    )
+    // todo -l leagues option
     ..addOption(
       'sportCenter',
-      abbr: 's',
       defaultsTo: '@sportCenter1',
       help: 'The sport center id field.',
     )
-    ..addOption(
-      'createdBy',
-      abbr: 'c',
-      defaultsTo: '@player*',
-      help: 'The createdBy field.',
-    )
-    ..addOption(
-      'filename',
-      abbr: 'f',
-      defaultsTo: 'teams',
-      help: 'Output file name.',
-    )
     ..addFlag(
       'help',
-      abbr: 'h',
+      // abbr: 'h',
       negatable: false,
       help: 'Displays help information.',
     );
@@ -43,21 +25,11 @@ void main(List<String> arguments) async {
     print('${argParser.usage}');
     return;
   }
-
-  final String index = argResults['index'];
-  int indexAsInt;
-
-  try {
-    indexAsInt = int.parse(index);
-  } catch (_) {
-    handleError('Invalid argument: index');
-  }
-
+  // todo argsParser class in app
   final sportCenter = argResults['sportCenter'];
-  final createdBy = argResults['createdBy'];
-  final filename = argResults['filename'];
 
-  await app.getTeams(indexAsInt, sportCenter, createdBy, filename);
+  // todo call app.main and do the rest in app package
+  await app.getTeams(sportCenter);
 
   return;
 }
