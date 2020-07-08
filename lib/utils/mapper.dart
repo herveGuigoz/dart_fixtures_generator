@@ -1,10 +1,8 @@
-
-
 import '../models/team_color.dart';
 
 final colorsValues = EnumValues({
   // EN
-  'arsenal': TeamColors('#f44336', '#f5f5f5'),
+  'arsenal': TeamColors('#f44336', '#f44336'),
   'astonvilla': TeamColors('#8e0038', '#bbdefb'),
   'brightonhovealbionfc': TeamColors('#bbdefb', '#fafafa'),
   'bournemouth': TeamColors('#b71c1c', '#263238'),
@@ -18,9 +16,9 @@ final colorsValues = EnumValues({
   'manutd': TeamColors('#c4001d', '#c4001d'),
   'newcastle': TeamColors('#000000', '#ffffff'),
   'norwich': TeamColors('#ffff56', '#00b248'),
-  'sheffieldunitedfc': TeamColors('#c30000', '#ffffff'),
-  'southampton': TeamColors('#c30000', '#ffffff'),
-  'tottenham': TeamColors('#ffffff', '#ffffff'),
+  'sheffieldunitedfc': TeamColors('#c30000', '#eceff1'),
+  'southampton': TeamColors('#c30000', '#eceff1'),
+  'tottenham': TeamColors('#eceff1', '#eceff1'),
   'watford': TeamColors('#ffff00', '#212121'),
   'westham': TeamColors('#560027', '#00b8d4'),
   'wolves': TeamColors('#ffab00', '#ffab00'),
