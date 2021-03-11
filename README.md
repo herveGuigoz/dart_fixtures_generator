@@ -4,16 +4,22 @@
 
 [Get the Dart SDK](https://dart.dev/get-dart)
 
-- Process command
+1. Install dependencies
 
 ```bash
-dart bin/main.dart
+$ dart pub get
+```
+
+2. Process command
+
+```bash
+$ dart bin/main.dart
 ```
 
 Files will be generated under `build/` folder.
 
-- Displays optionnal arguments
+3. Displays optionnal arguments
 
 ```bash
-dart bin/main.dart --help
+$ dart bin/main.dart --help
 ```
