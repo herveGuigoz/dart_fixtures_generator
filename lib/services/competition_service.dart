@@ -1,38 +1,33 @@
-import 'package:openfootball_fixtures_yaml/models/competition_model.dart';
+import 'package:openfootball_fixtures_yaml/repositories/repository.dart';
+import 'package:riverpod/riverpod.dart';
 
-import '../repositories/fixture_repository.dart';
 import 'file_service.dart';
 
+final competitionServiceRef = Provider((ref) => CompetitionService(ref.read));
+
 class CompetitionService extends FileService {
-  final FixtureRepository _repository;
+  CompetitionService(this.read);
 
-  CompetitionService(this._repository);
+  final Reader read;
 
-  Future<void> writeCompetitionFixtures(List<String> leagues) async {
-    final competitions = await Future.wait(
-      leagues.map((e) async => await _repository.getCompetition(e)),
-    );
+  Repository get _repository => read(repositoryRef);
 
-    // header
+  Future<void> writeCompetitionFixture() async {
+    final competition = await _repository.getCompetition();
+
     write('include:');
-    write('- ./SportCenterFixtures.yaml', 1);
-    write('- ./FieldFixtures.yaml', 1);
+    write('- ./SportCenterFixtures.yaml', indent: 1);
+    write('- ./FieldFixtures.yaml', indent: 1);
     write('');
     write('App\\Entity\\Competition:');
 
-    competitions.asMap().forEach((i, competition) {
-      final competitionId = leagues.indexOf(competition.league) + 1;
-      write('competition${competitionId}:', 1);
-      write('name: ${competition.name}', 2);
-      write('visible: 1', 2);
-      write('twoLegged: 1', 2);
-      write(
-        "expectedStartingAt: <(new DateTime('${competition.expectedStartingAt}'))>",
-        2,
-      );
-      write("sportCenter: '@sportCenter1'", 2);
-      write('');
-    });
+    write('competition${competition.id}:', indent: 1);
+    write("name: '${competition.name}'", indent: 2);
+    write('visible: ${competition.visible}', indent: 2);
+    write('twoLegged: ${competition.twoLegged}', indent: 2);
+    write('expectedStartingAt: ${competition.expectedStartingAt}', indent: 2);
+    write("sportCenter: '${competition.sportCenter}'", indent: 2);
+    write('');
 
     await save('CompetitionFixtures.yaml');
   }

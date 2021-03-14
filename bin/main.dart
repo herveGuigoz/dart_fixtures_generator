@@ -2,7 +2,7 @@ import 'package:openfootball_fixtures_yaml/main.dart' as app;
 import 'package:args/args.dart';
 import 'dart:io';
 
-ArgResults argResults;
+late ArgResults argResults;
 
 void main(List<String> arguments) async {
   final argParser = ArgParser()

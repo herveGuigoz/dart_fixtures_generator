@@ -5,7 +5,15 @@ import '../constantes.dart';
 abstract class FileService {
   final sb = StringBuffer();
 
+  Future<void> createDirectoryIfNotExist() async {
+    final directory = Directory(kOutputsDirectory);
+
+    if (!directory.existsSync()) await directory.create(recursive: true);
+  }
+
   Future<void> save(String filename) async {
+    await createDirectoryIfNotExist();
+
     final file = File('$kOutputsDirectory$filename');
 
     var sink = file.openWrite();
@@ -16,11 +24,7 @@ abstract class FileService {
     stdout.writeln('ツ new file => $kOutputsDirectory$filename');
   }
 
-  void write(String string, [int x = 0]) {
-    sb.writeln('${kIndent * x}$string');
-  }
-
-  void indent(String string, [int x = 1]) {
-    sb.writeln('${kIndent * x}$string');
+  void write(String string, {int indent = 0}) {
+    sb.writeln('${kIndent * indent}$string');
   }
 }

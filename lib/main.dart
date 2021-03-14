@@ -1,22 +1,20 @@
-import 'package:openfootball_fixtures_yaml/services/cache_service.dart';
+import 'package:openfootball_fixtures_yaml/services/session_service.dart';
+import 'package:riverpod/riverpod.dart';
 
-import 'network/network.dart';
-import 'network/network_interface.dart';
-import 'repositories/fixture_repository.dart';
-import 'services/tems_service.dart';
 import 'services/competition_service.dart';
-import 'services/match_service.dart';
-
-final NetworkInterface _network = Network();
-final FixtureRepository _repository = FixtureRepository(_network);
-final TeamService _teamService = TeamService(_repository);
-final CompetitionService _competitionService = CompetitionService(_repository);
-final MatchService _matchService = MatchService(_repository);
-
-final cacheService = CacheService();
+import 'services/team_service.dart';
 
 Future<void> main(List<String> leagues) async {
-  await _teamService.writeTeamFixtures(leagues);
-  await _competitionService.writeCompetitionFixtures(leagues);
-  await _matchService.writeCompetitionMatchFixtures(leagues);
+  final scope = ProviderContainer();
+
+  final competition = scope.read(competitionServiceRef);
+  await competition.writeCompetitionFixture();
+
+  final teamService = scope.read(teamServiceRef);
+  await teamService.writeTeamFixtures();
+  await teamService.writeCompetitionTeamFixtures();
+
+  final sessionService = scope.read(sessionServiceRef);
+  await sessionService.writeSessionFixtures();
+  await sessionService.writeSessionTeamFixtures();
 }
