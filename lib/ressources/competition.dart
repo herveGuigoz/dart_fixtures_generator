@@ -9,8 +9,8 @@ class Competition {
   final String name;
   final DateTime date;
 
-  int get visible => 1;
-  int get twoLegged => 1;
+  bool get visible => true;
+  bool get twoLegged => true;
   String get sportCenter => '@sportCenter1';
   String get expectedStartingAt => "<(new DateTime('${date.toLocal()}'))>";
 

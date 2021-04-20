@@ -29,7 +29,7 @@ class Match extends Equatable {
   final String team2;
   final Score? score;
 
-  String get roundId => round.lastChars(1);
+  String get roundId => round.replaceAll('Matchday ', '');
 
   String get dateAsString => '${date.toString().substring(0, 10)} 14:00:00';
 

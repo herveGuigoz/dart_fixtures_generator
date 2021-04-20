@@ -64,7 +64,7 @@ class SessionService extends FileService {
       write('ngtvSession${index + 1}Competition1TeamHome:', indent: 1);
       write('home: true', indent: 2);
       if (session.played) {
-        write('score: ${session.homeScore}', indent: 2);
+        write('fullScore: [${session.homeScore}]', indent: 2);
       }
       write("team: '@team$homeTeamId'", indent: 2);
       write("competitionTeam: '@competition1Team$homeTeamId'", indent: 2);
@@ -74,7 +74,7 @@ class SessionService extends FileService {
       write('ngtvSession${index + 1}Competition1TeamAway:', indent: 1);
       write('home: false', indent: 2);
       if (session.played) {
-        write('score: ${session.awayScore}', indent: 2);
+        write('fullScore: [${session.awayScore}]', indent: 2);
       }
       write("team: '@team$awayTeamId'", indent: 2);
       write("competitionTeam: '@competition1Team$awayTeamId'", indent: 2);
